@@ -1,22 +1,16 @@
 import numpy as np
 
-matrix_a = []
+list_a = [int(num) for num in input().split()]
 
-for i in range(3):
-    a = []
-    for j in range(3):
-        a.append(int(input()))
-    matrix_a.append(a)
-
-print(matrix_a)
+list_a = np.reshape(list_a, (3, 3))
 
 result = {
-    'mean': [np.mean(matrix_a, axis=0).astype(float), np.mean(matrix_a, axis=1).astype(float), np.mean(matrix_a).astype(float)],
-    'variance': [np.var(matrix_a, axis=0).astype(float), np.var(matrix_a, axis=1).astype(float), np.var(matrix_a).astype(float)],
-    'standard deviation': [np.std(matrix_a, axis=0).astype(float), np.std(matrix_a, axis=1).astype(float), np.std(matrix_a).astype(float)],
-    'max': [np.max(matrix_a, axis=0).astype(float), np.max(matrix_a, axis=1).astype(float), np.max(matrix_a).astype(float)],
-    'min': [np.min(matrix_a, axis=0).astype(float), np.min(matrix_a, axis=1).astype(float), np.min(matrix_a).astype(float)],
-    'sum': [np.sum(matrix_a, axis=0).astype(float), np.sum(matrix_a, axis=1).astype(float), np.sum(matrix_a).astype(float)]
+    'mean': [np.mean(list_a, axis=0).astype(float), np.mean(list_a, axis=1).astype(float), np.mean(list_a).astype(float)],
+    'variance': [np.var(list_a, axis=0).astype(float), np.var(list_a, axis=1).astype(float), np.var(list_a).astype(float)],
+    'standard deviation': [np.std(list_a, axis=0).astype(float), np.std(list_a, axis=1).astype(float), np.std(list_a).astype(float)],
+    'max': [np.max(list_a, axis=0).astype(float), np.max(list_a, axis=1).astype(float), np.max(list_a).astype(float)],
+    'min': [np.min(list_a, axis=0).astype(float), np.min(list_a, axis=1).astype(float), np.min(list_a).astype(float)],
+    'sum': [np.sum(list_a, axis=0).astype(float), np.sum(list_a, axis=1).astype(float), np.sum(list_a).astype(float)]
 }
 
 print(result)
